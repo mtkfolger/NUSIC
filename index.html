@@ -1,37 +1,43 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <title>NUSIC - The Music of Other Cultures</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- UIkit CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.7.0/dist/css/uikit.min.css" />
-    <!-- UIkit JS -->
-    <script src="https://cdn.jsdelivr.net/npm/uikit@3.7.0/dist/js/uikit.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/uikit@3.7.0/dist/js/uikit-icons.min.js"></script>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <head>
+        <title>NUSIC - The Music of Other Cultures</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- UIkit CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.7.0/dist/css/uikit.min.css" />
+        <!-- UIkit JS -->
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.7.0/dist/js/uikit.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.7.0/dist/js/uikit-icons.min.js"></script>
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
 
-<body>
-    <main id="main">
-        <h1 id="main-header">NUSIC</h1>
+    <body>
+        <main id="main">
+            <h1 id="main-header">NUSIC</h1>
 
-        <h2 id="main-subhead">The Music of Other Cultures</h2>
+            <h2 id="main-subhead">The Music of Other Cultures</h2>
 
-        <!-- NAVBAR GOES HERE-->
+            <!-- NAVBAR GOES HERE-->
+        
+            <!-- This is a button toggling the modal -->
+            <button uk-toggle="target: #my-id" type="button" class="instructions-btn">Instructions</button>
 
-        <!-- This is a button toggling the modal -->
-        <button uk-toggle="target: #my-id" type="button" class="instructions-btn">Instructions</button>
-
-        <!-- This is the modal -->
-        <div id="my-id" uk-modal>
-            <div class="uk-modal-dialog uk-modal-body">
-                <h2 class="uk-modal-title"></h2>
-                <button class="uk-modal-close" type="button">Close</button>
+            <!-- This is the modal -->
+            <div id="my-id" uk-modal>
+                <div class="uk-modal-dialog uk-modal-body">
+                    <h2 class="uk-modal-title"></h2>
+                    <button class="uk-modal-close" type="button">Close</button>
+                </div>
             </div>
-        </div>
-    </main>
-</body>
+
+            <div id="regions_div" style="width: 1000px; height: 800px;;"></div>
+            <script src="script.js"></script>
+
+        </main>
+
+    </body>
 
 </html>
