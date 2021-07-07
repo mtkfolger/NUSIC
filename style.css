@@ -1,0 +1,22 @@
+* {
+    background: -webkit-linear-gradient(to right, #4BC0C8, #C779D0, #FEAC5E);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4BC0C8, #C779D0, #FEAC5E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#main-header{
+    display: flex;
+    justify-content: center;
+}
+
+#main-subhead{
+    display: flex;
+    justify-content: center;
+}
+
+#aside {
+    background-color: white;
+    border-style: solid;
+    width: 20%;
+    margin: 1em;
+    padding: 1em;
+}
