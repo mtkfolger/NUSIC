@@ -23,5 +23,17 @@ google.charts.load('current', {
 
     var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
 
+    google.visualization.events.addListener(chart, 'select', chartSelectedHandler)
+
+    function chartSelectedHandler(event) {
+        console.log(chart.getSelection());
+        selection = chart.getSelection();
+
+        countryrow = selection[0].row;
+        console.log(countryrow);
+        console.log(data.getValue(countryrow, 0));
+
+    }
+
     chart.draw(data, options);
   }
