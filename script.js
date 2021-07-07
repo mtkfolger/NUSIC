@@ -18,6 +18,7 @@ google.charts.load('current', {
       ['Russia']
     ])
     var options = {
+      backgroundColor: 'blue'
         
     };
 
