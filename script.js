@@ -37,6 +37,7 @@ function drawRegionsMap() {
         
   };
 
+
   var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
 
   google.visualization.events.addListener(chart, 'select', chartSelectedHandler)
@@ -45,6 +46,7 @@ function drawRegionsMap() {
     selection = chart.getSelection();
     country = data.getValue(selection[0].row, 0);
     getCountryCode(country);
+
 
   }
 
@@ -60,6 +62,9 @@ function getcountryTopChart(countryCode) {
     console.log(tracklist);
     console.log(tracklist[0].track);
    
+
+    appendMusicInfo(tracklist);
+
 
   })
 
@@ -94,21 +99,25 @@ function getCountryCode(country) {
 
 
 
-
-//getcountryTopChart();
-
-
-
 //take information from API call and return track name, album, and country name at top of modal
 function appendMusicInfo(tracklist) {
     
   var list = $('<ul>');
-  var li = $('<li>', {
-    text: `Track Name: ${tracklist[0].track.track_name} | Artist Name: ${tracklist[0].track.artist_name} | Album Name: ${tracklist[0].track.album_name}`
-  });
 
-  let div = document.createElement("div")
-  div.append(li)
+ 
+  let div = $("#results")
+  div.children().remove();
 
-  console.log(li);
-}
+  // a for loop to get the entire list of 25 top tracks
+  for (let i = 0; i < tracklist.length; i++) {
+    var li = $('<li>', {
+      text: `Track Name: ${tracklist[i].track.track_name} | Artist Name: ${tracklist[i].track.artist_name} | Album Name: ${tracklist[i].track.album_name}`
+    });
+
+    list.append(li);
+
+    console.log(li);
+  } 
+
+  div.append(list);
+
