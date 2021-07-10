@@ -1,16 +1,11 @@
-* {
+body{
     background: -webkit-linear-gradient(to right, #dde8fc, #799fd0, #3a8cf7);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #d6e6f5, #98c4ec, #5c69e6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
-body{
-    height: 100vh;
 }
 
 #main-header{
     font-weight: bold;
     display: flex;
-    justify-content: center;
     color: white
 }
 
@@ -18,7 +13,6 @@ body{
     font-weight: bold;
     color: white;
     display: flex;
-    justify-content: center;
     padding-top: 0;
     margin-top: 0;
 }
@@ -35,7 +29,6 @@ body{
     color: black;
     background-color: rgb(214, 214, 214);
     background-image: none;
-    margin-left: 47.5%;
 }
 
 p {
@@ -48,4 +41,9 @@ p {
     background-color: rgb(214, 214, 214);
     background-image: none;
     margin-left: 17.5em;
+}
+
+#switch-div {
+    margin-top: 15px;
+    color: white;
 }
