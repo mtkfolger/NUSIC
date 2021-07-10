@@ -99,3 +99,16 @@ function getCountryCode(country) {
 
 
 
+//take information from API call and return track name, album, and country name at top of modal
+function appendMusicInfo(tracklist) {
+    
+  var list = $('<ul>');
+  var li = $('<li>', {
+    text: `Track Name: ${tracklist[0].track.track_name} | Artist Name: ${tracklist[0].track.artist_name} | Album Name: ${tracklist[0].track.album_name}`
+  });
+
+  let div = document.createElement("div")
+  div.append(li)
+
+  console.log(li);
+}
