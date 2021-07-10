@@ -37,6 +37,7 @@ function drawRegionsMap() {
         
   };
 
+
   var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
 
   google.visualization.events.addListener(chart, 'select', chartSelectedHandler)
@@ -45,6 +46,7 @@ function drawRegionsMap() {
     selection = chart.getSelection();
     country = data.getValue(selection[0].row, 0);
     getCountryCode(country);
+
 
   }
 
@@ -60,7 +62,9 @@ function getcountryTopChart(countryCode) {
     console.log(tracklist);
     console.log(tracklist[0].track);
    
+
     appendMusicInfo(tracklist);
+
 
   })
 
@@ -95,15 +99,11 @@ function getCountryCode(country) {
 
 
 
-
-//getcountryTopChart();
-
-
-
 //take information from API call and return track name, album, and country name at top of modal
 function appendMusicInfo(tracklist) {
     
   var list = $('<ul>');
+
  
   let div = $("#results")
   div.children().remove();
@@ -120,4 +120,4 @@ function appendMusicInfo(tracklist) {
   } 
 
   div.append(list);
-}
+
