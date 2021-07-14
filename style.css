@@ -47,3 +47,16 @@ p {
     margin-top: 15px;
     color: white;
 }
+
+.results-header {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-style: italic;
+    margin-bottom: .5em;
+}
+
+.results-list {
+    display: flex;
+    justify-content: center;
+}
