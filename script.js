@@ -27,7 +27,7 @@ function drawRegionsMap() {
     ['Australia'],
     ['New Zealand'],
     ['Ivory Coast'],
-    ['South Afrifa'],
+    ['South Africa'],
     ['Madagascar'],
     ['India']
   ]);
@@ -46,8 +46,6 @@ function drawRegionsMap() {
     selection = chart.getSelection();
     country = data.getValue(selection[0].row, 0);
     getCountryCode(country);
-
-
   }
 
   chart.draw(data, options);
@@ -55,19 +53,28 @@ function drawRegionsMap() {
 
 
 function getcountryTopChart(countryCode) {
-  fetch(`https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/chart.tracks.get?apikey=a796737fb3bafc9bde347d07ad7780c1&chart_name=top&page=1&page_size=25&country=${countryCode}&f_has_lyrics=1`)
+  fetch(`https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/chart.tracks.get?apikey=${config.NusicApiKey}&chart_name=top&page=1&page_size=25&country=${countryCode}&f_has_lyrics=1`)
   .then(response => response.json())
   .then(function(data) {
     var tracklist = data.message.body.track_list
     console.log(tracklist);
     console.log(tracklist[0].track);
-   
-
-    appendMusicInfo(tracklist);
-
-
+    appendMusicInfo(country, tracklist);
   })
+}
 
+function getArtistInfo(event) {
+  
+  event.preventDefault();
+  event.stopPropagation();
+  var artist = $('#artistName').val();
+  console.log(artist);
+  fetch(`https://cors-anywhere.herokuapp.com/http://api.musixmatch.com/ws/1.1/track.search?apikey=${config.NusicApiKey}&q_artist=${artist}&page_size=10&page=1&s_track_rating=desc`)
+  .then(response => response.json())
+  .then(function(data) {
+    var tracklist = data.message.body.track_list
+    appendMusicInfo(tracklist);
+  })
 }
 
 function getCountryCode(country) {
@@ -103,8 +110,6 @@ function getCountryCode(country) {
 function appendMusicInfo(tracklist) {
     
   var list = $('<ul>');
-
- 
   let div = $("#results")
   div.children().remove();
 
@@ -115,9 +120,11 @@ function appendMusicInfo(tracklist) {
     });
 
     list.append(li);
-
     console.log(li);
   } 
 
   div.append(list);
+}
 
+
+$('#searchButton').on("click", getArtistInfo);
