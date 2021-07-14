@@ -540,7 +540,7 @@ function getCountryCode(country) {
 
 //take information from API call and return track name, album, and country name at top of modal
 function appendMusicInfo(ListName, tracklist) {
-
+  var switcher = $("#switcher")
   let div = $("#results")
   div.children().remove();
 
@@ -562,6 +562,7 @@ function appendMusicInfo(ListName, tracklist) {
     console.log(li);
   }
   div.append(list);
+  UIkit.switcher(switcher).show(2);
 }
 
 $('#searchButton').on("click", getArtistInfo);
