@@ -53,12 +53,9 @@ function drawRegionsMap() {
 
 function getcountryTopChart(countryCode) {
   fetch(`https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/chart.tracks.get?apikey=${config.NusicApiKey}&chart_name=top&page=1&page_size=25&country=${countryCode}&f_has_lyrics=1`)
-
   .then(response => response.json())
   .then(function(data) {
     var tracklist = data.message.body.track_list
-    console.log(tracklist);
-    console.log(tracklist[0].track);
     appendMusicInfo(country, tracklist);
   })
 }
@@ -74,7 +71,7 @@ function getArtistInfo(event) {
   .then(response => response.json())
   .then(function(data) {
     var tracklist = data.message.body.track_list
-    appendMusicInfo(tracklist);
+    appendMusicInfo(artist, tracklist);
   })
 }
 
@@ -108,22 +105,18 @@ function getCountryCode(country) {
 
 
 //take information from API call and return track name, album, and country name at top of modal
-function appendMusicInfo(tracklist, country) {
-    
+function appendMusicInfo(ListName, tracklist) {
 
-  var list = $('<ul>');
   let div = $("#results")
   div.children().remove();
- var countryName = $('<h1>', {
-   text: `Top 25 Tracks: ${country}`,
-   class: "results-header"
- });
 
-
- div.append(countryName);
-
-
-
+  var list = $('<ul>');
+  var countryName = $('<h1>', {
+    text: `${ListName}: Top ${tracklist.length} Tracks`,
+    class: "results-header"
+  });
+  div.append(countryName);
+  console.log(tracklist.length);
   // a for loop to get the entire list of 25 top tracks
   for (let i = 0; i < tracklist.length; i++) {
     var li = $('<li>', {
