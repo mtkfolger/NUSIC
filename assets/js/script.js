@@ -267,9 +267,7 @@ function getcountryTopChart(countryCode) {
   fetch(`https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/chart.tracks.get?apikey=${config.NusicApiKey}&chart_name=top&page=1&page_size=25&country=${countryCode}&f_has_lyrics=1`)
     .then(response => response.json())
     .then(function (data) {
-      console.log(data);
       var tracklist = data.message.body.track_list;
-      console.log(tracklist);
       appendMusicInfo(country, tracklist);
     })
   ;
@@ -550,7 +548,6 @@ function appendMusicInfo(ListName, tracklist) {
     class: "results-header"
   });
   div.append(countryName);
-  console.log(tracklist.length);
   // a for loop to get the entire list of 25 top tracks
   for (let i = 0; i < tracklist.length; i++) {
     var li = $('<li>', {
@@ -559,7 +556,6 @@ function appendMusicInfo(ListName, tracklist) {
     });
 
     list.append(li);
-    console.log(li);
   }
   div.append(list);
   UIkit.switcher(switcher).show(2);
