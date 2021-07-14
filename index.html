@@ -42,22 +42,28 @@
 
         <div id="switch-div" class="uk-flex uk-flex-center">
             <ul class="uk-subnav uk-subnav-pill" uk-switcher="connect: .uk-switcher">
-                <div><a id="country" href="#">World Map</a></div>
-                <div><a id="song" href="#">Song</a></div>
+                <div><a id="map" href="#">World Map</a></div>
                 <div><a id="artist" href="#">Artist</a></div>
-                <div><a href="#">Results</a></div>
-
+                <div><a is="resultsTab" href="#">Results</a></div>
             </ul>
-
         </div>
 
 
         <ol class="uk-switcher uk-margin">
             <li>
-                <div id="regions_div"></div>
+                <div class="uk-margin" id="regions_div"></div>
             </li>
-            <li>Test2</li>
-            <li>Test 3</li>
+            <li>
+                <form class="uk-form-horizontal uk-form-width-large uk-align-center">
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="artistName">Artist</label>
+                        <div class="uk-form-controls">
+                            <input class="uk-input" id="artistName" type="text" placeholder="Artist">
+                        </div>
+                    </div>
+                    <button type="button" id="searchButton" class="uk-button-primary uk-button-large uk-align-center">Search</button>
+                </form>
+            </li>
             <li>
                 <h1 class="results-header"></h1>
                 <div id="results"></div>
