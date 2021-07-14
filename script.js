@@ -126,6 +126,6 @@ function appendMusicInfo(tracklist, country) {
 
     console.log(li);
   } 
-
   div.append(list); 
+
 }
