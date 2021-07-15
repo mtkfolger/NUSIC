@@ -1,25 +1,26 @@
 # NUSIC
+
 NUSIC - A Website For Discovering New Music From Around The World    
 
 ---------
 
 User Story:
 
-As a person interested in learning about music that people are listening to in other countries
+As a person interested in learning about music from other countries
 
-I want to be able click on any location in a rendered world map 
+I want to click on any location in a rendered world map and find a list of songs
 
 AND/OR 
 
-I want to be able to click on any link in the navigation bar
+I want to search for songs by a specific artist
 
-So that I am shown the top music charts for any specified country / artist / genre and be introduced to new music from around the world
+So that I am shown the top music charts for any specified country or artist
 
 ---------
 
 Description:
 
-For our first group project, we decided to create a website that allows users to identify popular music in any country across the globe, simply by the click of a mouse. Thus, an interactive map takes up most of the screen so that users can effectively select any one of the 195 countries across the globe. The map also displays each country's name when scrolled over by mouse. However, if users prefer an alternative search option, they may use the nav-bar, which links to music lists sorted by country, genre or artist. Specific direction on how to navigate the website can be found by clicking the 'instructions' tab which in turn opens to a modal box. 
+For our first group project, we decided to create a website that allows users to identify popular music in any country across the globe, simply by the click of a mouse. Thus, an interactive map takes up most of the screen so that users can effectively select any one of the 195 countries across the globe. The map also displays each country's name when scrolled over by the mouse. However, if users prefer an alternative search option, they may type in a specific artist in a search bar, which links to list of music for that artist. Specific direction on how to navigate the website can be found by clicking the 'instructions' tab which in turn opens a modal. 
 
 ---------
 
@@ -28,29 +29,33 @@ Instructions:
 How to search?
 
 Move mouse icon to a specfic country 
-Right-click the country to see specific music-chart information
+Right-click the country to see results i.e. top 25 songs
 
 OR
 
-Move mouse icon to a specific nav-bar link
-Right-click nav-link to general music-chart information
+Click on the artist tab
+
+Type in a specific artist 
+
+Press the search button to see results i.e. top # of songs
 
 ---------
 
 Challenges: 
 
 1. Displaying the necessary information for each country
-2. Loading interactive map to fit the page
-3. 
+2. Loading interactive map to fit the page and making the map responsive
+3. Ensuring that the switcher tabs functions correctly / uderstanding the uikit framework
 
 ---------
 
 Future Plans: 
 
-
-
-
-
+- Adding albums covers for the songs
+- Embedding a media player within the site
+- Adding information for the unfinished countries
+- Adding a lyrics section so user can search by lyrics
+- Improving the search engine so that seperate tabs are created for each search
 
 ----------
 
