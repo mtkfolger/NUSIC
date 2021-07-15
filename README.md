@@ -59,6 +59,12 @@ Future Plans:
 
 ----------
 
+Image and Link:
+![Website Home Page](./assets/images/siteImage.jpeg)
+
+https://mtkfolger.github.io/NUSIC/
+----------
+
 Credits:
 
 Harrison Armstrong - https://github.com/nightmarefails
