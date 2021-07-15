@@ -48,15 +48,12 @@ p {
     color: white;
 }
 
-.results-header {
+#results {
     display: flex;
     justify-content: center;
     font-weight: bold;
     font-style: italic;
     margin-bottom: .5em;
-}
-
-.results-list {
-    display: flex;
-    justify-content: center;
+    flex-direction: column;
+    text-align: center;
 }
