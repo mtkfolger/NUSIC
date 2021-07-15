@@ -542,17 +542,17 @@ function appendMusicInfo(ListName, tracklist) {
   let div = $("#results")
   div.children().remove();
 
-  var list = $('<ul>');
+  var list = $('<ul>', {
+    class: "uk-list uk-list-striped results-list",
+  });
   var countryName = $('<h1>', {
     text: `${ListName}: Top ${tracklist.length} Tracks`,
-    class: "results-header"
   });
   div.append(countryName);
   // a for loop to get the entire list of 25 top tracks
   for (let i = 0; i < tracklist.length; i++) {
     var li = $('<li>', {
-      text: `Track Name: ${tracklist[i].track.track_name} | Artist Name: ${tracklist[i].track.artist_name} | Album Name: ${tracklist[i].track.album_name}`,
-      class: "uk-align-center"
+      text: `${i + 1}. Track Name: ${tracklist[i].track.track_name} | Artist Name: ${tracklist[i].track.artist_name} | Album Name: ${tracklist[i].track.album_name}`
     });
 
     list.append(li);
