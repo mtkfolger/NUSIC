@@ -59,6 +59,12 @@ Future Plans:
 
 ----------
 
+Languages Used: 
+
+- HTML
+- CSS
+- JavaScript
+
 Image and Link:
 ![Website Home Page](./assets/images/siteImage.jpeg)
 
