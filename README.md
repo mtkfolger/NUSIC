@@ -24,7 +24,9 @@ For our first group project, we decided to create a website that allows users to
 
 ---------
 
-Instructions: 
+Instructions:
+
+Due to a limitation of not having a back-end you may need to visit https://cors-anywhere.herokuapp.com/corsdemo and click on request temporary access for this website to work.
 
 How to search?
 
