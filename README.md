@@ -58,8 +58,7 @@ Future Plans:
 - Improving the search engine so that seperate tabs are created for each search
 
 ----------
-
-Languages Used: 
+Technologies Used: 
 
 - HTML
 - CSS
